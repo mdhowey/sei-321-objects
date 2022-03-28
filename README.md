@@ -93,7 +93,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
   - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty#direct_vs._inherited_properties
 
 - `delete`key --> removes a property from an object
-  -https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/delete 
+  - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/delete 
 
 ## Iterating over Objects
 

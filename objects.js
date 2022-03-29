@@ -31,6 +31,14 @@ let noise1 = animal1.kitty;
 
 // You Do 💪: Adding / Updating Properties Practice
 
+
+const game = {};
+
+game.numGuesses = 0;
+game.numGuesses = 1;
+
+// console.log(game);
+
 // *Bracket Notation*
 
 // Remember how brackets are used with arrays?
@@ -41,15 +49,32 @@ const zoo_inventory = ['tiger', 'monkey', 'shark']
 
 let animal2 = {
   kitty: 'meow',
-  puppy: 'woof'
+  puppy: 'woof',
+  'first_example': 'test',
 };
 
-let noise2 = animal2['kitty'];
+let noise2 = animal2['first_example']; 
 
 // console.log(noise2);
-// ** What will this pring to the console? **
+// ** What will this print to the console? **
 
 // You Do 💪: Square Bracket Notation
+
+const catalog = {
+  1: 'Bathtub',
+  2: 'Toilet',
+  3: 'Shower',
+  4: 'Sink',
+}
+
+// console.log(catalog.hasOwnProperty(1));
+
+// let sku = '';
+// while (sku !== 'quit') {
+//   sku = prompt('Enter SKU or "quit" to exit: ');
+//   let price = catalog[sku];
+//   if (sku !== 'quit') alert(`The price of ${sku} is ${price}`);
+// }
 
 // *Hungry for more?*  
 
@@ -63,7 +88,7 @@ let object = {};
 // add properties to object
 object.string = 'String';
 object.number = 4;
-object.array = ['this','is','an','array'];
+object.array = ['this', 'is', 'an', 'array'];
 
 // use .hasOwnProperty() to check if object has a property
 // console.log(object);
@@ -79,10 +104,10 @@ object.array = ['this','is','an','array'];
 const geniuses = {
   Einstein: true,
   Newton: true,
-  Snooki: false
+  Snooki: false,
 };
 
-delete geniuses.Snooki;
+// delete geniuses.Snooki;
 
 // console.log(geniuses);
 
@@ -90,12 +115,12 @@ delete geniuses.Snooki;
  * Iterating Over Objects
  */
 
-// *for...in loop*
+// // *for...in loop*
 // for (let key in geniuses) {
 //   console.log(`The value of the ${key} property is ${geniuses[key]}`);
 // }
 
-// // *Object.keys(obj) returns an array of a given object's own enumerable property names, iterated in the same order that a normal loop would *
+// *Object.keys(obj) returns an array of a given object's own enumerable property names, iterated in the same order that a normal loop would *
 // Object.keys(geniuses).forEach(function (val) {
 //   console.log(val);
 // });
@@ -105,15 +130,27 @@ delete geniuses.Snooki;
 //   console.log(val);
 // });
 
-// // *Object.entries(obj) --> returns an array of a given object's own enumerable string-keyed property [key, value] pairs*
+// *Object.entries(obj) --> returns an array of a given object's own enumerable string-keyed property [key, value] pairs*
 // Object.entries(geniuses).forEach(function (val) {
 //   console.log(val);
 // });
 
 /**
- * Methods --> a property that holds a function 
+ * Methods --> a property that holds a function
  */
 
+const test = {
+  biggestNum: 45,
+  smallestNum: 2,
+  secretNum: 24,
+  play: function () {
+    this.secretNum = Math.floor(Math.random() *
+      (this.biggestNum - this.smallestNum + 1)) + this.smallestNum;
+  }
+}
 
+console.log(test.play());
+
+console.log(test);
 
 // We Do 💪: Build Methods
